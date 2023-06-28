@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+
+<style>
+    .modelViewer {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+    }
+
+    /* .modelViewerButton {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    } */
+
+    .modelViewerButton {
+        position: absolute;
+        top: 60px;
+        left: 25%;
+        transform: translateX(-25%);
+        background-color: #3DD1E7;
+        border: 0 solid #E5E7EB;
+        box-sizing: border-box;
+        color: #000000;
+        display: flex;
+        font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 3rem;
+        font-weight: 700;
+        justify-content: center;
+        line-height: 3.25rem;
+        padding: .75rem 1.65rem;
+        position: relative;
+        text-align: center;
+        text-decoration: none #000000 solid;
+        text-decoration-thickness: auto;
+        width: 100%;
+        max-width: 460px;
+        height: 130px;
+        cursor: pointer;
+        transform: rotate(-2deg);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    .modelViewerButton:focus {
+        outline: 0;
+    }
+
+    .modelViewerButton:after {
+        content: '';
+        position: absolute;
+        border: 1px solid #000000;
+        bottom: 4px;
+        left: 4px;
+        width: calc(100% - 1px);
+        height: calc(100% - 1px);
+    }
+
+    .modelViewerButton:hover:after {
+        bottom: 2px;
+        left: 2px;
+    }
+
+    @media (min-width: 768px) {
+        .modelViewerButton {
+            padding: .75rem 3rem;
+            /* font-size: 1.25rem; */
+        }
+    }
+</style>
+
+<model-viewer class="modelViewer" src="./Golden_Modelo.glb" ios-src="./Golden_Modelo.usdz" ar ar-modes="scene-viewer webxr quick-look"
+    camera-controls poster="poster.webp" shadow-intensity="1" autoplay>
+    <button class="modelViewerButton" slot="ar-button" id="ar-button">
+        Ver en tu espacio
+    </button>
+</model-viewer>
+
+
+</html>
